@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geolocator</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body >
+    <nav class="light-blue lighten-1" role="navigation">
+      <div class="nav-wrapper container">
+        <ul class="hide-on-med-and-down">
+          <li><%= link_to "Accounts",accounts_path, class: "brand-logo" %></li>
+        </ul>
+        <ul class="right">
+          <li><%= link_to "new Account", new_account_path, class: "right" %></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+    
+    <%= yield %>
+    
+    </div>
+
+
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<h1>Accounts</h1>
+  <table class="hoverable">
+    <thead>
+      <tr>
+        <th data-field="Name">Name</th>
+        <th data-field="Zipcode">Zipcode</th>
+        <th data-field="City">City</th>
+        <th data-field="State">State</th>
+        <th data-field="Longitude">Longitude</th>
+        <th data-field="Latitude">Latitude</th>
+        <th data-field="Pro">Pro</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    <% @accounts.each do |account| %>
+      <tr>
+        <td><h5>  <%= account.name %></h5></td>
+        <td>  <%= account.zipcode %></td>
+        <% if account.city %>
+          <td>  <%= account.city %>,</td>
+          <td>  <%= account.state %></td>
+          <td>  <%= account.latitude %></td>
+          <td>  <%= account.longitude %></td>
+          <td>  <%= account.pro %></td>
+        <% else %>
+          <td col-span="4"class="green-text">Loading Data</td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
